@@ -32,27 +32,27 @@ JADE
 * Sintaxis
 * include footer & header
 
-        include views/header
-        include views/footer
+            include views/header
+            include views/footer
 
 * variables
     * Gruntfile.js
 
-        options: {
-            pretty: true,
-            data: {
-                title: 'DEV!!',
-                env: 'dev'
+
+            options: {
+               pretty: true,
+               data: {
+                   title: 'DEV!!',
+                   env: 'dev'
+               }
             }
-        }
 
     * index.jade
 
-        title= title
-
-        span entorno:#{env}
-        if (env == "dev")
-            span -no pasa nada!
+            title= title
+            span entorno:#{env}
+            if (env == "dev")
+               span -no pasa nada!
 
 SASS
 -----
@@ -61,12 +61,13 @@ SASS
     * section h2
     * hover
 
-        a
-          text-decoration: none
-          color: black
-          &:hover
-            background: black
-            color: white
+            
+            a
+             text-decoration: none
+             color: black
+             &:hover
+               background: black
+               color: white
 
 
 * Variables
@@ -76,59 +77,63 @@ SASS
 * Funciones
     * darken
 
-        darken(red, 10%)
+
+            darken(red, 10%)
 
 
 * for
 
-        @for $i from 1 through 10
-           &:nth-child(#{$i})
-              background: darken(red, 10% + ($i * 5))
+
+            @for $i from 1 through 10
+              &:nth-child(#{$i})
+                 background: darken(red, 10% + ($i * 5))
 * Extend
 
-        .btn-normal
-            border-color: #ffa394
-        .btn
-          background: none
-          border: 2px solid
-          +border-radius(6px)
-          padding: 4px 15px
-          &.big
-            @extend .btn-normal
-            padding: 4px 30px
-          &.normal
-            @extend .btn-normal
-          &.small
-            @extend .btn-normal
-            padding: 4px 4px
-          &.alert
-            $color: red
-            background: $color
-            color: white
+
+            .btn-normal
+               border-color: #ffa394
+            .btn
+                background: none
+                border: 2px solid
+                +border-radius(6px)
+                padding: 4px 15px
+                &.big
+                  @extend .btn-normal
+                  padding: 4px 30px
+                &.normal
+                  @extend .btn-normal
+                &.small
+                  @extend .btn-normal
+                  padding: 4px 4px
+                &.alert
+                  $color: red
+                  background: $color
+                  color: white
 
 * Mixins
   * btn-hover
 
-        @mixin btn-hover($color, $back-color, $border-color: black)
-          &:hover
-            color: $color
-            background: $back-color
-            border-color: $border-color
 
-
-        +btn-hover(black, #ffa394)
-        +btn-hover($color, white, $color)
+            @mixin btn-hover($color, $back-color, $border-color: black)
+             &:hover
+               color: $color
+               background: $back-color
+               border-color: $border-color
+            
+            
+            +btn-hover(black, #ffa394)
+            +btn-hover($color, white, $color)
 
 COMPASS
 ======
 * reset
 
-        @import "compass/reset"
-
-        +global-reset
+            @import "compass/reset"
+            
+            +global-reset
 
 
 * mixins
     * border-radius
 
-        +border-radius(6px)
+            +border-radius(6px)
