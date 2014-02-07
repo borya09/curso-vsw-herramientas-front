@@ -87,42 +87,11 @@ SASS
             @for $i from 1 through 10
               &:nth-child(#{$i})
                  background: darken(red, 10% + ($i * 5))
-* Extend
 
+* mixin
+* extend
+* placeholders
 
-            .btn-normal
-               border-color: #ffa394
-            .btn
-                background: none
-                border: 2px solid
-                +border-radius(6px)
-                padding: 4px 15px
-                &.big
-                  @extend .btn-normal
-                  padding: 4px 30px
-                &.normal
-                  @extend .btn-normal
-                &.small
-                  @extend .btn-normal
-                  padding: 4px 4px
-                &.alert
-                  $color: red
-                  background: $color
-                  color: white
-
-* Mixins
-  * btn-hover
-
-
-            @mixin btn-hover($color, $back-color, $border-color: black)
-             &:hover
-               color: $color
-               background: $back-color
-               border-color: $border-color
-            
-            
-            +btn-hover(black, #ffa394)
-            +btn-hover($color, white, $color)
 
 COMPASS
 ======
