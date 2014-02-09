@@ -1,7 +1,26 @@
 NODEJS
 -----
-* package.json
-* Instalar dependencias
+* Programa prueba
+    * package.json
+    * Instalar dependencias
+    * Ejecutar
+
+
+
+
+        var moment = require('moment');
+        exports.hoy = function(){
+            return moment().format('MMMM Do YYYY, h:mm:ss a');
+        }
+
+        var fechas = require('./fechas.js');
+        console.log(fechas.hoy());
+
+
+
+* Proyecto web
+    * package.json
+    * Instalar dependencias
 
 
 GRUNT
@@ -89,7 +108,41 @@ SASS
                  background: darken(red, 10% + ($i * 5))
 
 * mixin
+
+            @mixin btn($back, $color, $hover-back-percent: 10%)
+              color: $color
+              background: $back
+              &:hover
+                background: darken($back, $hover-back-percent)
+
+            .btn
+              +btn(red, black)
+
+
 * extend
+
+            .navbar
+              background: rgba(0,0,0,0.5)
+              border-color: red
+              position: fixed
+              width: 100%
+              top: 0
+              bottom: 0
+              &:hover
+                background: rgb(255, 163, 148)
+
+
+            .header-container
+              @extend .navbar
+              border-bottom: 4px solid
+              height: 100px
+              bottom: auto
+            .footer-container
+              @extend .navbar
+              border-top: 4px solid
+              top: auto
+              height: 40px
+
 * placeholders
 
 
