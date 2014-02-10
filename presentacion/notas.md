@@ -4,18 +4,16 @@ NODEJS
     * package.json
     * Instalar dependencias
     * Ejecutar
-
-
-
-
-        var moment = require('moment');
-        exports.hoy = function(){
-            return moment().format('MMMM Do YYYY, h:mm:ss a');
-        }
-
-        var fechas = require('./fechas.js');
-        console.log(fechas.hoy());
-
+            
+```js
+   var moment = require('moment');
+   exports.hoy = function(){
+      return moment().format('MMMM Do YYYY, h:mm:ss a');
+   }
+   
+   var fechas = require('./fechas.js');
+   console.log(fechas.hoy());
+```
 
 
 * Proyecto web
