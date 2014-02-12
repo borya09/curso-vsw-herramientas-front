@@ -1,5 +1,5 @@
 INSTALLATION
-=============
+--------
 Clone this repo and install the dependencies:
 
 * [nodejs](http://nodejs.org/)
@@ -10,7 +10,7 @@ Clone this repo and install the dependencies:
 * Install project dependencies -- `bower install`
 
 DEVELOPMENT
-=============
+--------
 'grunt server'
 
 Starts development environment:
@@ -18,8 +18,13 @@ Starts development environment:
 * live reload browser
 
 DEPLOYMENT
-=======
+--------
 'grunt build'
 
 Builds the project:
 * Unify/minify js & css
+* 
+
+SLIDES OF THE COURSE
+--------
+http://es.slideshare.net/borya09/herramientas-front
