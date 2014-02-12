@@ -7,7 +7,7 @@ Clone this repo and install the dependencies:
 * [grunt-cli](http://gruntjs.com/getting-started)
 * [Compass Core](http://compass-style.org/install/)
 * Install node dependencies -- `npm install`
-* Install project dependencies -- `bower install`
+* Install project dependencies -- `bower install` (Run: `npm install -g bower` if you don't have it installed)
 
 DEVELOPMENT
 --------
